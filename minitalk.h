@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   client.c                                           :+:      :+:    :+:   */
+/*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taejkim <taejkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/19 21:36:48 by taejkim           #+#    #+#             */
-/*   Updated: 2021/07/21 18:31:49 by taejkim          ###   ########.fr       */
+/*   Created: 2021/07/21 18:30:02 by taejkim           #+#    #+#             */
+/*   Updated: 2021/07/21 19:46:07 by taejkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+#ifndef MINITALK_H
+# define MINITALK_H
 
-int	main(int ac, char *av[])
-{
+# include <unistd.h>
+# include <stdlib.h>
+# include <signal.h>
 
-	return (0);
-}
+
+
+#endif
