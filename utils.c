@@ -6,23 +6,15 @@
 /*   By: taejkim <taejkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/21 20:05:36 by taejkim           #+#    #+#             */
-/*   Updated: 2021/07/23 20:10:53 by taejkim          ###   ########.fr       */
+/*   Updated: 2021/07/24 03:11:29 by taejkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-void	ft_free(char **ptr)
-{
-	if (ptr == NULL || *ptr == NULL)
-		return ;
-	free(*ptr);
-	*ptr = NULL;
-}
-
 int	ft_strlen(char *str)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	while (str[len])
@@ -37,10 +29,26 @@ int	ft_putchar(char c)
 
 int	ft_putstr(char *str)
 {
-	int len;
+	int	len;
 
 	len = ft_strlen(str);
 	return (write(1, str, len));
+}
+
+int	ft_pow(int base, int n)
+{
+	int	res;
+	int	i;
+
+	if (n < 0)
+		return (0);
+	if (n == 0)
+		return (1);
+	res = base;
+	i = 0;
+	while (++i < n)
+		res *= base;
+	return (res);
 }
 
 void	error_out(char *msg)

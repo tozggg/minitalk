@@ -6,11 +6,12 @@
 #    By: taejkim <taejkim@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/23 23:49:54 by taejkim           #+#    #+#              #
-#    Updated: 2021/07/24 00:31:48 by taejkim          ###   ########.fr        #
+#    Updated: 2021/07/24 03:10:18 by taejkim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = minitalk
+
 SERVER = server
 CLIENT = client
 
@@ -20,7 +21,7 @@ RM = rm -f
 
 SRC_S = server.c
 SRC_C = client.c
-SRC_U = utils.c utils2.c
+SRC_U = utils.c string.c
 
 OBJ_S = $(SRC_S:.c=.o)
 OBJ_C = $(SRC_C:.c=.o)

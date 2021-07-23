@@ -6,13 +6,13 @@
 /*   By: taejkim <taejkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/21 19:57:02 by taejkim           #+#    #+#             */
-/*   Updated: 2021/07/23 23:17:38 by taejkim          ###   ########.fr       */
+/*   Updated: 2021/07/24 03:06:17 by taejkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-int		ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	unsigned long long	res;
 	int					pos;
@@ -22,7 +22,7 @@ int		ft_atoi(const char *nptr)
 	pos = 1;
 	i = 0;
 	while (nptr[i] == ' ' || nptr[i] == '\n' || nptr[i] == '\t'
-			|| nptr[i] == '\v' || nptr[i] == '\f' || nptr[i] == '\r')
+		|| nptr[i] == '\v' || nptr[i] == '\f' || nptr[i] == '\r')
 		++i;
 	if (nptr[i] == '-')
 		pos *= -1;
@@ -85,7 +85,7 @@ static void	assign_ptr(char *ptr, int n, int size)
 	}
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*ptr;
 	int		size;
@@ -96,20 +96,4 @@ char		*ft_itoa(int n)
 		return (NULL);
 	assign_ptr(ptr, n, size);
 	return (ptr);
-}
-
-int	ft_pow(int base, int n)
-{
-	int res;
-	int	i;
-
-	if (n < 0)
-		return (0);
-	if (n == 0)
-		return (1);
-	res = base;
-	i = 0;
-	while (++i < n)
-		res *= base;
-	return (res);
 }
