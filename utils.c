@@ -6,7 +6,7 @@
 /*   By: taejkim <taejkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/21 20:05:36 by taejkim           #+#    #+#             */
-/*   Updated: 2021/07/21 20:25:56 by taejkim          ###   ########.fr       */
+/*   Updated: 2021/07/23 20:10:53 by taejkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ int	ft_putstr(char *str)
 	return (write(1, str, len));
 }
 
-void	error_out(void)
+void	error_out(char *msg)
 {
-	ft_putstr("Error");
+	ft_putstr(msg);
 	exit(1);
 }

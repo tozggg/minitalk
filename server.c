@@ -6,14 +6,26 @@
 /*   By: taejkim <taejkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 21:36:54 by taejkim           #+#    #+#             */
-/*   Updated: 2021/07/21 20:27:37 by taejkim          ###   ########.fr       */
+/*   Updated: 2021/07/23 20:22:51 by taejkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-void	handler(int signo)
+void	print_pid(char *pid)
 {
+	if (pid == NULL)
+		error_out("error : not found pid");
+	ft_putstr("server pid : ");
+	ft_putstr(pid);
+	ft_putchar('\n');
+}
+
+void	handler(int sig)
+{
+	static char	c;
+	int			i;
+
 	
 }
 
@@ -24,16 +36,20 @@ int	main(void)
 	sigset_t			blk;
 
 	pid = ft_itoa(getpid());
-	ft_putstr(pid);
+	print_pid(pid);
 	ft_free(&pid);
+	//-------------
 	act.__sigaction_u.__sa_handler = handler;
 	sigemptyset(&blk);
 	sigaddset(&blk, SIGUSR1);
 	sigaddset(&blk, SIGUSR2);
+	act.sa_mask = blk;
 	if (sigaction(SIGUSR1, &act, NULL) != 0)
-		error_out();
+		error_out("error : signal send failed\n");
 	if (sigaction(SIGUSR2, &act, NULL) != 0)
-		error_out();
+		error_out("error : signal send failed\n");
+	//------------- 여기까지 sigaction 사용 signal 도 한번 사용해보자 = 블록하지않아도 오류가 나지 않는가
 	while (1)
 		pause();
+	return (0);
 }

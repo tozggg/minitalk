@@ -6,7 +6,7 @@
 /*   By: taejkim <taejkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/21 18:30:02 by taejkim           #+#    #+#             */
-/*   Updated: 2021/07/21 20:26:47 by taejkim          ###   ########.fr       */
+/*   Updated: 2021/07/23 20:11:07 by taejkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ void	ft_free(char **ptr);
 int		ft_strlen(char *str);
 int		ft_putchar(char c);
 int		ft_putstr(char *str);
-void	error_out(void);
+void	error_out(char *msg);
 
 #endif
