@@ -6,7 +6,7 @@
 /*   By: taejkim <taejkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 21:36:54 by taejkim           #+#    #+#             */
-/*   Updated: 2021/07/24 03:05:37 by taejkim          ###   ########.fr       */
+/*   Updated: 2021/07/24 03:13:42 by taejkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	handler(int sig)
 
 int	main(void)
 {
-	char				*pid;
+	char	*pid;
 
 	pid = ft_itoa(getpid());
 	print_pid(pid);
