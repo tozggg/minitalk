@@ -6,7 +6,7 @@
 /*   By: taejkim <taejkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/21 18:30:02 by taejkim           #+#    #+#             */
-/*   Updated: 2021/07/23 20:11:07 by taejkim          ###   ########.fr       */
+/*   Updated: 2021/07/23 23:57:29 by taejkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,9 @@
 # include <signal.h>
 # include <sys/types.h>
 
-
-
 int		ft_atoi(const char *nptr);
 char	*ft_itoa(int n);
+int		ft_pow(int base, int n);
 
 void	ft_free(char **ptr);
 int		ft_strlen(char *str);

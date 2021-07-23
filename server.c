@@ -6,7 +6,7 @@
 /*   By: taejkim <taejkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 21:36:54 by taejkim           #+#    #+#             */
-/*   Updated: 2021/07/23 20:22:51 by taejkim          ###   ########.fr       */
+/*   Updated: 2021/07/23 23:18:51 by taejkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,17 @@ void	print_pid(char *pid)
 void	handler(int sig)
 {
 	static char	c;
-	int			i;
+	static int	i;
 
-	
+	if (sig == SIGUSR1)
+		c = c | ft_pow(2, i);
+	++i;
+	if (i == 8)
+	{
+		ft_putchar(c);
+		c = 0;
+		i = 0;
+	}
 }
 
 int	main(void)

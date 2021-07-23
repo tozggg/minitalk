@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   convert_string.c                                   :+:      :+:    :+:   */
+/*   utils2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taejkim <taejkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/21 19:57:02 by taejkim           #+#    #+#             */
-/*   Updated: 2021/07/21 20:09:03 by taejkim          ###   ########.fr       */
+/*   Updated: 2021/07/23 23:17:38 by taejkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,4 +96,20 @@ char		*ft_itoa(int n)
 		return (NULL);
 	assign_ptr(ptr, n, size);
 	return (ptr);
+}
+
+int	ft_pow(int base, int n)
+{
+	int res;
+	int	i;
+
+	if (n < 0)
+		return (0);
+	if (n == 0)
+		return (1);
+	res = base;
+	i = 0;
+	while (++i < n)
+		res *= base;
+	return (res);
 }
