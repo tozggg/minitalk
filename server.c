@@ -6,7 +6,7 @@
 /*   By: taejkim <taejkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 21:36:54 by taejkim           #+#    #+#             */
-/*   Updated: 2021/07/24 03:13:42 by taejkim          ###   ########.fr       */
+/*   Updated: 2021/07/25 19:35:58 by taejkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ void	handler(int sig)
 	++i;
 	if (i == 8)
 	{
-		if (c == 0)
-			ft_putchar('\n');
-		else
+		if (c)
 			ft_putchar(c);
+		else
+			ft_putchar('\n');
 		c = 0;
 		i = 0;
 	}

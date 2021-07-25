@@ -6,7 +6,7 @@
 /*   By: taejkim <taejkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 21:36:48 by taejkim           #+#    #+#             */
-/*   Updated: 2021/07/24 03:13:52 by taejkim          ###   ########.fr       */
+/*   Updated: 2021/07/25 19:16:10 by taejkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	main(int ac, char *av[])
 
 	if (ac != 3)
 		error_out("error : ./client [server pid] [string to pass]\n");
-	pid = atoi(av[1]);
+	pid = ft_atoi(av[1]);
 	if (!(100 <= pid && pid <= 100000))
 		error_out("error : pid incorret\n");
 	str = av[2];

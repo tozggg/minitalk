@@ -6,7 +6,7 @@
 /*   By: taejkim <taejkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/21 20:05:36 by taejkim           #+#    #+#             */
-/*   Updated: 2021/07/24 03:11:29 by taejkim          ###   ########.fr       */
+/*   Updated: 2021/07/25 19:37:05 by taejkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,6 @@ int	ft_pow(int base, int n)
 	int	res;
 	int	i;
 
-	if (n < 0)
-		return (0);
 	if (n == 0)
 		return (1);
 	res = base;
